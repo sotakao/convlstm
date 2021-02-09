@@ -3,6 +3,7 @@
 import torch
 
 Tensor = torch.Tensor
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class ConvLSTMCell(torch.nn.Module):
     def __init__(self,
