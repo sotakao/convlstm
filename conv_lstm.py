@@ -33,8 +33,8 @@ class ConvLSTMCell(torch.nn.Module):
     def forward(self, input_, prev_state):
         """
         Args:
-            input_: tensor of size [batch, input_channel, height, width]
-            prev_state: tensor of size [batch, hidden_channel, height, width]
+            input_: tensor of size [batch, channel (input), height, width]
+            prev_state: tensor of size [batch, channel (hidden), height, width]
         """
         # get batch and spatial sizes
         batch_size = input_.shape[0]
